@@ -35,9 +35,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                         <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="resume.html">Serviços</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projects.html">Parceiros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#parceiros">Parceiros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                     </ul>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                                 <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
                                     href="resume.html">Sobre</a>
                                 <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
-                                    href="projects.html">Serviços</a>
+                                    href="#servicos">Serviços</a>
                             </div>
                         </div>
                     </div>
@@ -401,48 +401,175 @@
             </a>
         </section>
 
+
+        <section class="bg-light py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xxl-8">
+                        <div class="text-center my-5" id="servicos">
+                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline"
+                                    id="sobre">Serviços</span></h2>
+
+                            <p class="text-muted">Tendo amplo conhecimento na parte comercial pois ha 13 anos sempre
+                                atuou neste setor , hoje engenheiro também atua no desenvolvimento de grandes
+                                empreendimentos assim tanto no desenvolvimento na parte comercial como também na parte
+                                executiva e viabilidade finaceira .</p>
+
+                            <ul class="text-muted">
+                                <li>Consultoria</li>
+                                <li>Projetos</li>
+                                <li>Execução de Obras</li>
+                                <li>Administração de Obras</li>
+                                <li>Viabilidade de projetos</li>
+                                <li>Incorporação</li>
+                                <li>Projetos adequados com quantitativo de viabilidades</li>
+                                <li>Viabilidade financeira</li>
+                                <li>Aprovações e negociações administrativas</li>
+                                <li>Vendas</li>
+                                <li>Vendas de Empreendimentos</li>
+                                <li>Consultoria em marketing</li>
+                                <li>Gestão de plantão de vendas</li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-5" id="contato">
+            <div class="container px-5">
+                <!-- Contact form-->
+                <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                    <div class="text-center mb-5">
+                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i
+                                class="bi bi-envelope"></i></div>
+                        <h1 class="fw-bolder">Fale Conosco</h1>
+                        <p class="lead fw-normal text-muted mb-0">Vamos trabalhar juntos!</p>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- * * SB Forms Contact Form * *-->
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- This form is pre-integrated with SB Forms.-->
+                            <!-- To make this form functional, sign up at-->
+                            <!-- https://startbootstrap.com/solution/contact-forms-->
+                            <!-- to get an API token!-->
+                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <!-- Name input-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..."
+                                        data-sb-validations="required" />
+                                    <label for="name">Nome Completo</label>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.
+                                    </div>
+                                </div>
+                                <!-- Email address input-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="email" type="email" placeholder="name@example.com"
+                                        data-sb-validations="required,email" />
+                                    <label for="email">Email</label>
+                                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is
+                                        required.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.
+                                    </div>
+                                </div>
+                                <!-- Phone number input-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+                                        data-sb-validations="required" />
+                                    <label for="phone">Telefone</label>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
+                                        required.</div>
+                                </div>
+                                <!-- Message input-->
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="message" type="text"
+                                        placeholder="Enter your message here..." style="height: 10rem"
+                                        data-sb-validations="required"></textarea>
+                                    <label for="message">Mensagem</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is
+                                        required.</div>
+                                </div>
+                                <!-- Submit success message-->
+                                <!---->
+                                <!-- This is what your users will see when the form-->
+                                <!-- has successfully submitted-->
+                                <div class="d-none" id="submitSuccessMessage">
+                                    <div class="text-center mb-3">
+                                        <div class="fw-bolder">Form submission successful!</div>
+                                        To activate this form, sign up at
+                                        <br />
+                                        <a
+                                            href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    </div>
+                                </div>
+                                <!-- Submit error message-->
+                                <!---->
+                                <!-- This is what your users will see when there is-->
+                                <!-- an error submitting the form-->
+                                <div class="d-none" id="submitErrorMessage">
+                                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                                </div>
+                                <!-- Submit Button-->
+                                <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton"
+                                        type="submit">Enviar</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="bg-light py-5">
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xxl-8">
                         <div class="text-center my-5">
-                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline" id="sobre">Parceiros</span></h2>
-                           
+                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline"
+                                    id="parceiros">Parceiros</span></h2>
+
                             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                  <div class="carousel-item active" data-bs-interval="3150">
-                                    <img src="assets/parceiros/brio.png" class="d-block w-100 " alt="...">
-                                  </div>
-                                  <div class="carousel-item" data-bs-interval="3150">
-                                    <img src="assets/parceiros/lidera.png" class="d-block w-100" alt="...">
-                                  </div>
-                                  <div class="carousel-item" data-bs-interval="3150">
-                                    <img src="assets/parceiros/planeta.png" class="d-block w-100" alt="...">
-                                  </div>
-                                  <div class="carousel-item" data-bs-interval="3150">
-                                    <img src="assets/parceiros/adn.png" class="d-block w-100" alt="...">
-                                  </div>
-                                  <div class="carousel-item" data-bs-interval="3150">
-                                    <img src="assets/parceiros/mrv.png" class="d-block w-100" alt="...">
-                                  </div>
+                                    <div class="carousel-item active" data-bs-interval="3150">
+                                        <img src="assets/parceiros/brio.png" class="d-block w-100 " alt="...">
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="3150">
+                                        <img src="assets/parceiros/lidera.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="3150">
+                                        <img src="assets/parceiros/planeta.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="3150">
+                                        <img src="assets/parceiros/adn.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="3150">
+                                        <img src="assets/parceiros/mrv.png" class="d-block w-100" alt="...">
+                                    </div>
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Previous</span>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Next</span>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
                                 </button>
-                              </div>
+                            </div>
 
                         </div>
                     </div>
                 </div>
             </div>
 
-           
+
         </section>
+
     </main>
     <!-- Footer-->
     <footer class="bg-white py-4 mt-auto">
