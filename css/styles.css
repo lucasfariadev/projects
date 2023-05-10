@@ -84,6 +84,9 @@
 *::after {
   box-sizing: border-box;
 }
+@include color-mode(dark) {
+  // CSS variable overrides here...
+}
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -408,6 +411,25 @@ fieldset {
   border: 0;
 }
 
+
+
+#whats-fixo {
+  position: fixed;
+  width: 4.5vw;
+  height: 8vh;
+  bottom: 2vh;
+  right: 2vh;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+
+#whats-fixo:hover {
+  -webkit-animation: shake-top 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: shake-top 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
 legend {
   float: left;
   width: 100%;
@@ -598,7 +620,7 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -645,16 +667,20 @@ progress {
   .container-sm, .container {
     max-width: 540px;
   }
+
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
     max-width: 720px;
   }
+
+  
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
+  
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
@@ -1935,17 +1961,24 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+
 }
 @media (max-width: 767.98px) {
   .table-responsive-md {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+  .img-fluid{
+    width: 5vh;
+  }
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+  .img-fluid{
+    width: 5vh;
   }
 }
 @media (max-width: 1199.98px) {
@@ -11589,6 +11622,8 @@ html {
   margin-top: 5vw;
   max-height: 40rem;
   max-width: 40rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 .profile .profile-img {
   height: 80vw;
@@ -11597,15 +11632,35 @@ html {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  
+  
+  
 }
+
+.profile:hover{
+  transform: scale(1.1);
+}
+
+.profile img{
+  filter: drop-shadow(10px 10px 2px rgba(0,0,0, .1) );
+  transition: all 0.5s;
+}
+.profile img:hover{
+  filter: drop-shadow(10px 10px 2px rgba(0,0,0, .2) );
+}
+
+
+
+
 .profile .dots-1 {
   position: absolute;
   width: 3vw;
   right: 1.5vw;
   top: 4vw;
+  
 }
 .profile .dots-1 svg {
-  fill: #fff;
+  fill: #ff5207;
 }
 .profile .dots-2 {
   position: absolute;
@@ -11623,7 +11678,7 @@ html {
   bottom: 6.05vw;
 }
 .profile .dots-3 svg {
-  fill: #fff;
+  fill: #ff5207;
 }
 .profile .dots-4 {
   position: absolute;
