@@ -255,6 +255,60 @@ a:hover {
   color: var(--bs-link-hover-color);
 }
 
+
+form{
+  width: 100%;
+  max-width: 30rem;
+}
+
+label,
+input,
+textarea,
+button{
+  display: block;
+}
+input,
+textarea,
+button{
+  width: 100%;
+  font: inherit;
+  padding: 1.25rem;
+  font-weight: 700;
+}
+
+input, 
+textarea{
+  margin-bottom: 1rem;
+  border: 0.125rem solid rgb(201, 193, 193);
+  transition: border-color 0.3s;
+  box-shadow: 0.3s;
+}
+
+label{
+  margin-bottom: 0.5rem;
+  color: --bs-gray-100 ;
+}
+
+textarea{
+  min-height: 12.5rem;
+  resize: vertical;
+}
+
+button{
+  border: none;
+  border-radius: 99px;
+  
+}
+
+input:hover, 
+input:focus,
+textarea:hover,
+textarea:focus{
+  outline: none;
+  border-color: #1d90f5;
+  box-shadow: 0 0 0 0.3125rem #edeff3;
+}
+
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
@@ -402,6 +456,40 @@ button:not(:disabled),
 
 textarea {
   resize: vertical;
+
+}
+
+button{
+  border: none;
+  border-radius: 99px;
+  color: white;
+  background: var(--bs-code-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover,
+button:focus{
+  outline: none;
+  background: #1c70d3;
+}
+
+button:disabled{
+  cursor: not-allowed;
+  background: #4f5050;
+}
+
+
+.success, 
+.error{
+  text-align: center;
+}
+
+.success{
+  color: greenyellow;
+}
+.error{
+  color: tomato;
 }
 
 fieldset {
@@ -2879,10 +2967,10 @@ textarea.form-control-lg {
 .btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #024052;
-  --bs-btn-border-color: #024052;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #024052;
-  --bs-btn-hover-border-color: #024052;
+  --bs-btn-border-color: #212f33;
+  --bs-btn-hover-color: #024052;
+  --bs-btn-hover-bg: #d1460a;
+  --bs-btn-hover-border-color: #ff5207;
   --bs-btn-focus-shadow-rgb: 64, 79, 245;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #024052;
@@ -2891,6 +2979,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #024052;
   --bs-btn-disabled-border-color: #024052;
+  transition: 0.3s;
 }
 
 .btn-secondary {
@@ -2898,8 +2987,8 @@ textarea.form-control-lg {
   --bs-btn-bg: #ff5207;
   --bs-btn-border-color: #ff5207;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #e64093;
-  --bs-btn-hover-border-color: #e5358d;
+  --bs-btn-hover-bg: #024052;
+  --bs-btn-hover-border-color: #024052;
   --bs-btn-focus-shadow-rgb: 192, 26, 109;
   --bs-btn-active-color: #000;
   --bs-btn-active-bg: #e84b99;
@@ -2908,6 +2997,12 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #ff5207;
   --bs-btn-disabled-border-color: #ff5207;
+  transition: 0.5s;
+}
+
+.btn-primary:hover{
+  transform: scale(1.1);
+  filter: drop-shadow(5px 5px 1px rgba(0,0,0, .4)); 
 }
 
 .btn-success {
@@ -3136,9 +3231,9 @@ textarea.form-control-lg {
   color: #fff;
   border: none;
   --bs-btn-color: #212529;
-  --bs-btn-border-color: #212529;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #212529;
+  --bs-btn-border-color: #024052;
+  --bs-btn-hover-color: #ff5207;
+  --bs-btn-hover-bg: #083341;
 
   --bs-btn-focus-shadow-rgb: 33, 37, 41;
   --bs-btn-active-color: #fff;
@@ -3149,6 +3244,12 @@ textarea.form-control-lg {
   --bs-btn-disabled-bg: transparent;
 
   --bs-gradient: none;
+  transition: 0.5s;
+}
+
+.btn-outline-dark:hover{
+  transform: scale(1.1);
+  filter: drop-shadow(5px 5px 1px rgba(0,0,0, .4));
 }
 
 .btn-link {
@@ -3663,9 +3764,10 @@ ul{
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
   font-weight: var(--bs-nav-link-font-weight);
-  color: var(--bs-nav-link-color);
+  color: #024052;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: 1s;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
@@ -3673,7 +3775,8 @@ ul{
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: var(--bs-nav-link-hover-color);
+  color: #ff5207;
+  transform: scale(1.1);
 }
 .nav-link.disabled {
   color: var(--bs-nav-link-disabled-color);
@@ -3756,6 +3859,10 @@ ul{
 .nav-fill .nav-item .nav-link,
 .nav-justified .nav-item .nav-link {
   width: 100%;
+}
+
+.nav-item{
+  color: #024052
 }
 
 .tab-content > .tab-pane {
